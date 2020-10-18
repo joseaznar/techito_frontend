@@ -22,8 +22,6 @@ export default function TechitoProductsContainer({
 
   async function getResults () {
     try {
-      const questionsRequest = await fetch('http://18.218.135.180/questions');
-      const questionsJSON = await questionsRequest.json();
       const requestOptions = {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

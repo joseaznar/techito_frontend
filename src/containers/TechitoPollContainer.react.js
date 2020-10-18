@@ -48,6 +48,19 @@ export default function TechitoPollContainer({
     getQuestions();
   }, []);
 
+  function changeVal( value, id ) {
+   for (var i in answers.answers) {
+     if (answers.answers[i].id === id) {
+        answers.answers[i].content = value;
+        break; //Stop this loop, we found it!
+     }
+   }
+  }
+
+  function changeEmail(email, id) {
+   answers.email = email;
+  }
+
   function submit () {
     setAnswers(answers);
     goForward();
@@ -73,9 +86,9 @@ export default function TechitoPollContainer({
           </b>
         </p>
         {questions.map((question, index) => (
-          <PollQuestion key={index} question={question.content} type={question.type} options={question.options} onChange={question.id === 5 ? setLuz : (answers) => {}}/>
+          <PollQuestion key={index} question={question.content} type={question.type} options={question.options} id={question.id} onChange={question.id === 5 ? setLuz : changeVal}/>
         ))}
-        <PollQuestion question="Dejanos tu correo electronico" type="Open" options={[]} onChange={(answers) => {}}/>
+        <PollQuestion question="Dejanos tu correo electronico" type="Open" options={[]} questionId="" onChange={changeEmail}/>
         <div className="poll_button_div">
           <button
             className="poll_button"
