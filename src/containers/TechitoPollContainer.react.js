@@ -3,17 +3,55 @@ import PollQuestion from '../components/PollQuestion.react';
 
 type Props = $ReadOnly<{
   goForward: () => {},
+  setQuestions: () => {},
+  setAnswers: () => {},
+  setLuz: () => {},
+  questions: [],
 }>;
 
 export default function TechitoPollContainer({
   goForward,
+  setQuestions,
+  setAnswers,
+  questions,
+  setLuz,
 }: Props) {
-  const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState([]);
+  let answers = {"answers": [
+    {
+      "content": "2",
+      "question": 4
+    },
+    {
+      "content": "800",
+      "question": 5
+    },
+    {
+      "content": "1020",
+      "question": 6
+    },
+    {
+      "content": "2",
+      "question": 7
+    },
+    {
+      "content": "Vegetariano",
+      "question": 8
+    },
+    {
+      "content": "12",
+      "question": 9
+    }
+  ],
+  "email": "hello@example.com"};
 
   useEffect(() => {
     getQuestions();
   }, []);
+
+  function submit () {
+    setAnswers(answers);
+    goForward();
+  }
 
   async function getQuestions () {
     try {
@@ -35,11 +73,16 @@ export default function TechitoPollContainer({
           </b>
         </p>
         {questions.map((question, index) => (
-          <PollQuestion key={index} question={question.content} type={question.type} options={question.options} onChange={setAnswers}/>
+          <PollQuestion key={index} question={question.content} type={question.type} options={question.options} onChange={question.id === 5 ? setLuz : (answers) => {}}/>
         ))}
-        <PollQuestion question="Dejanos tu correo electronico" type="Open" options={[]} onChange={setAnswers}/>
+        <PollQuestion question="Dejanos tu correo electronico" type="Open" options={[]} onChange={(answers) => {}}/>
         <div className="poll_button_div">
-          <button className="poll_button" onClick={goForward}>
+          <button
+            className="poll_button"
+            onClick={
+                submit
+              }
+            >
             <strong>
               TERMINAR
             </strong>

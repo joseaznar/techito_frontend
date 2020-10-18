@@ -68,14 +68,15 @@ code {
 
 .landingPage_footer {
   margin: auto;
-  padding: 3px 15px;
+  padding: 3px 25px;
   max-width: 700px;
   background-color: #eaecc032;
 }
 
 .landingPage_footer_sabiasque {
-  width: 120px;
-  font-size: 20px;
+  margin-top: 15px;
+  width: 160px;
+  font-size: 30px;
   font-family: Barrio;
   background-color: white;
   color: black;
@@ -138,4 +139,96 @@ code {
   width: 250px;
   height: 80px;
   border-radius: 10px;
+}
+
+/* Products page styles */
+
+.products {
+  background-image: url('./media/backgroundProducts.jpeg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.products_results {
+  margin: auto;
+  max-width: 50%;
+  font-size: 30px;
+}
+
+.products_footprint {
+  margin: auto;
+}
+
+.products_equivalence {
+  margin: auto;
+}
+
+.products_save_div {
+  margin: auto;
+  padding: 3px 25px;
+  max-width: 80%;
+  background-color: rgba(255,255,255,0.4);
+}
+
+.products_save_aprovechalo {
+  font-size: 40px;
+  margin: auto;
+  max-width: 800px;
+}
+
+.products_save_anual {
+  font-size: 30px;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.products_highlight {
+  background-color: white;
+}
+
+.products_save_button_text {
+  font-size: 40px;
+  margin: auto;
+  max-width: 600px;
+}
+
+.products_save_button_div {
+  margin: auto;
+  max-width: 210px;
+}
+
+.products_save_button {
+  margin: auto;
+  width: 190px;
+  height: 65px;
+  border-radius: 10px;
+  border: none;
+  font-size: 25px;
+}
+
+.products_save_inspiration {
+  font-size: 20px;
+  margin: auto;
+  max-width: 70%;
+}
+
+.products_save_inspiration p{
+  background-color: #eaecc0;
+}
+
+.products_bbva {
+  background: url('./media/bbva_logo.jpg') no-repeat;
+  background-size: 100% 100%;
+  height: 96px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.products_techito {
+  background: url('./media/logo.png') no-repeat;
+  background-size: 100% 100%;
+  height: 96px;
+  max-width: 300px;
+  margin: auto;
 }
