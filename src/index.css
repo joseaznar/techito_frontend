@@ -11,6 +11,8 @@ code {
     monospace;
 }
 
+/* Landing page styles */
+
 .landingPage {
   background-image: url('./media/backgroundLanding.png');
   background-size: cover;
@@ -37,12 +39,21 @@ code {
 .landingPage_principal {
   color: white;
   align-items: center;
+  padding-top: 100px;
   margin: auto;
   max-width: 850px;
 }
 
 .landingPage_principal p {
   font-size: 37px;
+}
+
+.landingPage_button_div {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  max-width: 260px;
+  align-items: center;
+  margin: auto;
 }
 
 .landingPage_button {
@@ -53,26 +64,78 @@ code {
   width: 250px;
   border-radius: 10px;
   font-size: 30px;
-  margin: auto;
 }
 
 .landingPage_footer {
   margin: auto;
-  padding: 10px;
+  padding: 3px 15px;
   max-width: 700px;
   background-color: #eaecc032;
 }
 
-.landingPage_footer p{
-  width: 100px;
+.landingPage_footer_sabiasque {
+  width: 120px;
+  font-size: 20px;
   font-family: Barrio;
   background-color: white;
   color: black;
   opacity: 1;
 }
 
-.landingPage_footer li{
+.landingPage_footer_li {
   font-family: Roboto;
   color: white;
   opacity: 1;
+}
+
+/* Poll page styles */
+
+.poll {
+  background-image: url('./media/backgroundPoll.jpeg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.poll_questions_container {
+  padding-top: 120px;
+  max-width: 75%;
+  margin: auto;
+  font-size: 30px;
+  font-family: Comfortaa;
+}
+
+.poll_h1 {
+  background-color: #eaecc0;
+  margin: 0;
+  width: 560px;
+}
+
+.poll_question {
+  margin-bottom: 40px;
+}
+
+.poll_question_label {
+  margin-right: 50px;
+}
+
+.poll_input {
+  height: 34px;
+  border-radius: 7px;
+  font-size: 20px;
+  font-family: Comfortaa;
+  background: rgba(0,0,0,0);
+}
+
+.poll_button_div {
+  margin: auto;
+  max-width: 250px;
+}
+
+.poll_button {
+  font-size: 20px;
+  background-color: rgba(0,0,0,0);
+  width: 250px;
+  height: 80px;
+  border-radius: 10px;
 }

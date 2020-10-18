@@ -9,13 +9,13 @@ export default function TechitoProductsContainer({
 }: Props) {
 
   return (
-    <>
+    <div>
       <h1>
         Products!
       </h1>
       <button onClick={goBack}>
         Encuesta
       </button>
-    </>
+    </div>
   );
 }
