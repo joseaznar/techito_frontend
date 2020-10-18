@@ -30,11 +30,11 @@ export default function TechitoPollContainer({
   return (
     <div>
       <h1>
-        Esta muy cerca de descrubrir como puedes ahorrar
+        Responde las siguientes preguntas
       </h1>
       <form>
       {questions.map((question, index) => (
-        <PollQuestion key={index} question={question.content}/>
+        <PollQuestion key={index} question={question.content} type={question.type} options={question.options}/>
       ))}
       </form>
       <button onClick={goBack}>

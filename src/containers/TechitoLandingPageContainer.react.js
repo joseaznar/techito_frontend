@@ -9,16 +9,38 @@ export default function TechitoLandingPageContainer({
 }: Props) {
 
   return (
-    <div>
-      <h1>
-        Descubre como ahorrar dinero cuidando el medio ambiente!
-      </h1>
-      <p>
-      Contesta 10 sencillas preguntas para descubrir como
-      </p>
-      <button onClick={goForward}>
-        Encuesta
-      </button>
+    <div className="landingPage">
+      <div className="landingPage_header">
+        <div className="landingPage_header_logo"/>
+      </div>
+      <div className="landingPage_principal">
+        <p>
+          <b>
+            Mejora tu economía, reduciendo tu huella de carbón
+          </b>
+        </p>
+      </div>
+      <div>
+        <button onClick={goForward} className="landingPage_button">
+          CALCULAR
+        </button>
+      </div>
+      <div className="landingPage_footer">
+        <p>
+          Sabías que…
+        </p>
+        <ul>
+          <li>
+            Cada <strong>SEGUNDO</strong> se talan 4 hectáreas de árboles
+          </li>
+          <li>
+            La generación de energía es la fuente más grande de CO2
+          </li>
+          <li>
+            Puedes ahorrar hasta el 90% de tus facturas de luz usando paneles solares
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
